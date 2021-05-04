@@ -26,6 +26,9 @@ const usersRouter = require("./routes/users");
 
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
+app.get("/", function (req, res) {
+  res.send("GET request to homepage");
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
